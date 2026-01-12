@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Training Forms Hub</title>
+  <title>National Health Research Agenda Setting Ministry of Health, Ethiopia</title>
   <style>
     /* Full screen layout */
     html, body {
       height: 100%;
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f0f2f5; /* light professional background */
-    }
+ background-color: #f0f2f5; /* gray background */
+}
 
     /* Center content vertically */
     .container {
@@ -26,50 +26,98 @@
 
     /* Logo */
     .logo {
-      width: 180px;
-      margin-bottom: 30px;
-    }
+  width: 180px;       /* max width you want */
+  height: auto;       /* keeps aspect ratio */
+  margin-bottom: 30px;
+  display: block;
+  border-radius: 8px; /* optional: slightly rounded corners */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); /* optional: subtle shadow */
+  object-fit: contain; /* ensures image fits nicely without stretching */
+}
 
-    /* Heading */
-    h1 {
-      font-size: 32px;
-      color: #333;
-      margin-bottom: 15px;
-    }
+   /* Heading */
+h1 {
+  font-size: 32px;
+ color: #1976d2 !important;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-align: center;
+}
+/* Continuous horizontal sliding title */
+h1 {
+  font-size: 32px;
+  color: #1a1a1a;
+  font-weight: 700;
+  white-space: nowrap; /* prevent line breaks */
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  animation: marquee 25s linear infinite; /* 10s speed, loops forever */
+}
 
-    /* Description */
-    p.description {
-      color: #555;
-      max-width: 600px;
-      line-height: 1.6;
-      font-size: 18px;
-      margin-bottom: 40px;
-    }
+@keyframes marquee {
+  0% {
+    transform: translateX(100%); /* start fully offscreen to the right */
+  }
+  100% {
+    transform: translateX(-100%); /* move fully offscreen to the left */
+  }
+}
+
+
+/* Title underline */
+.title-divider {
+  width: 120px;
+  height: 4px;
+  background-color: #1976d2;
+  margin: 10px auto 30px auto;
+  border-radius: 2px;
+}
+
+
+/* Description */
+ol.description {
+  max-width: 90%;
+  color: #333;              /* darker text */
+  font-size: 20px;
+  line-height: 1.8;         /* more spacing for readability */
+  margin: 0 auto 40px auto; /* centers the block and adds bottom space */
+  text-align: left;
+  padding-left: 30px;       /* aligns numbers nicely */
+}
+
+ol.description li {
+  margin-bottom: 12px;      /* more space between items */
+}
+
 
     /* Vertical button layout */
     .button-container {
       display: flex;
-      flex-direction: column; /* vertical buttons */
-      gap: 15px; /* space between buttons */
-      width: 250px; /* all buttons same width */
+      flex-direction: column;
+      gap: 15px;
+      width: 250px;
     }
 
-    .button {
-      display: block;
-      padding: 14px 20px;
-      background-color: #d32f2f; /* red button */
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 16px;
-      font-weight: bold;
-      transition: background-color 0.3s;
-      text-align: center;
-    }
+   .button {
+  display: block;
+  padding: 14px 20px;
+  background-color: #1976d2; /* blue */
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.1s;
+  text-align: center;
+}
 
-    .button:hover {
-      background-color: #b71c1c;
-    }
+.button:hover {
+  background-color: #0d47a1; /* darker blue */
+  transform: translateY(-2px);
+}
+
+
 
     /* Footer */
     footer {
@@ -78,7 +126,7 @@
       margin-top: 50px;
     }
 
-    /* Responsive for small screens */
+    /* Responsive */
     @media (max-width: 500px) {
       .button-container {
         width: 80%;
@@ -90,36 +138,164 @@
         font-size: 16px;
       }
     }
+    /* Instruction box styling */
+.instructions-box {
+  max-width: 90%;
+  background-color: #ffffff;
+  border-left: 5px solid #1976d2;
+  padding: 20px 25px;
+  margin-bottom: 40px;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+}
+
+.instructions-box h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #1976d2;
+}
+
+.instructions-box ol {
+  margin-left: 20px;
+}
+
+.instructions-box li {
+  margin-bottom: 12px;
+  font-size: 17px;
+  color: #444;
+}
+.sliding-title-wrapper {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center; /* center horizontally */
+}
+
+.sliding-title-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 25s linear infinite;
+  text-align: center;
+  font-family: Arial, sans-serif; 
+  font-weight: 700;               
+  font-size: 32px;                
+  color: #1976d2;                 
+}
+
+.sliding-title-content span {
+  display: block;  /* each line on its own row */
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
 
   </style>
 </head>
 <body>
   <div class="container">
     <!-- Logo -->
-    <img src="logo.png" alt="Logo" class="logo">
+    <img src="Logo.jpg" alt="Logo" class="logo">
 
     <!-- Heading -->
-    <h1>Training Forms Hub</h1>
+<div class="sliding-title-wrapper">
+  <div class="sliding-title-content">
+    <span>National Health Research Agenda Setting</span><br>
+    <span>Ministry of Health,Ethiopia</span>
+  </div>
+</div>
+<div class="title-divider"></div>
 
     <!-- Description -->
     <p class="description">
-      Welcome! Select the form you want to fill from the options below. 
-      After submitting a form, you can return here to fill additional forms as needed.
-    </p>
+  Welcome!To proceed, please select a thematic area from the options below and complete the required
+  forms under the corresponding MOH Research Thematic Area.
+</p>
+
+<div class="instructions-box">
+  <h2>Submission Instructions</h2>
+  <ol>
+    <li>Complete all Ten forms sequentially, following the designated order.</li>
+    <li>After submitting each form, use the return link on the submission confirmation page to return to this page and continue with the next form.</li>
+  </ol>
+</div>
+
 
     <!-- Buttons vertically -->
     <div class="button-container">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhYiZYeTO_JTrIH6ixsiTfILUPbd4U65d22v4RuQC1ISafKA/viewform?usp=header" class="button">HIS/DH</a>
-      <a href="https://forms.gle/Form2Link" class="button">Training Feedback Form</a>
-      <a href="https://forms.gle/Form3Link" class="button">Attendance Form</a>
-      <a href="https://forms.gle/Form4Link" class="button">Evaluation Form</a>
-      <a href="https://forms.gle/Form5Link" class="button">Other Forms</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSerN1PZY4xjWSKcjXxS-f_EJIwQ_0CGRqi0bo7uhialEXA3gQ/viewform?usp=header" class="button">1.Health Service Delivery</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScUiMDYPoAqdeHHDtfV26o0fZ18QyfqxDdMrd1rs8Z_W0MaFg/viewform?usp=header" class="button">2.RMNCHAYH/EPI/Nutrition</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfhYiZYeTO_JTrIH6ixsiTfILUPbd4U65d22v4RuQC1ISafKA/viewform?usp=header" class="button">3.CD-NTD</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfvNtv78SFU9vBjMirIWHpbS2vvsELbHYtytKvpI1e30tcrMg/viewform?usp=publish-editor" class="button">4.NCD</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeySXQtuO3rztW2-Kh82k2p7xz8_xcpoRRBFLxkjkasc4WXog/viewform?usp=publish-editor" class="button">5.Health Innovation, Product Development & Supply Chain Management</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCzFW4yVxKUXO8ZrhMBEY_7g6HCoCJTJhWszclvv5jo2dhaQ/viewform?usp=header" class="button">6.HIS/DH</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSds7raEQWIWnWV3DZsZ-Tk_iba4KN7oUUJabRUjqUa67IwBmA/viewform?usp=header" class="button">7.Health Policy & LMG</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDtrIi313JlU3Wg_b19TSU3yjjU_IaiSbVIgejkVCkZrTvkA/viewform?usp=header" class="button">8.HRH</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSegwVE943B1dpdozZdVHA8Oi-hSUMi3xyKo4Hs4us_yN6ccCA/viewform?usp=header" class="button">9.Health Care Finance </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScf3MR9T-3GOHLTkKpzLZefh71wdV1eTN7s-Zz9Cvv48wqfFw/viewform?usp=header" class="button">10.Environment & Health</a>
     </div>
 
     <!-- Footer -->
-    <footer>
-      Thank you for using the Training Forms Hub. For assistance, contact admin@example.com
-    </footer>
+   <hr style="width: 60%; border: 0; border-top: 1px solid #ccc; margin: 40px auto;">
+<footer style="text-align: center; color: #777; font-size: 13px; width: 100%;">
+  &copy; 2026  National Health Research Agenda Ministry of Health Ethiopia. For assistance, contact <a href="mailto:abebaw.gebeyehu@moh.gov.et" style="color: #1976d2; text-decoration: none;">abebaw.gebeyehu@moh.gov.et</a>
+</footer>
+
   </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
